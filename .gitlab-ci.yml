@@ -6,7 +6,7 @@ stages:
   - deploy
 
 build_a:
-  stage: build
+  stage: buildd
   script:
     - echo "Build a"
 
