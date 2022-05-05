@@ -3,7 +3,7 @@ image: maven:3-jdk-13
 stages:
   - build
   - test
-  - deploy
+  - package
 
 build:
   stage: build
@@ -15,7 +15,7 @@ test:
   script:
     - mvn test
 
-deploy:
-  stage: deploy
+package:
+  stage: package
   script:
-    - mvn deploy
+    - mvn package
