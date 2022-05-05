@@ -5,17 +5,17 @@ stages:
   - test
   - deploy
 
-build_a:
+build:
   stage: build
   script:
-    - echo "build"
+    - mvn compile
 
 test:
   stage: test
   script:
-    - echo "test"
+    - mvn test
 
 deploy:
   stage: deploy
   script:
-    - echo "deploy"
+    - mvn deploy
