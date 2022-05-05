@@ -6,31 +6,16 @@ stages:
   - deploy
 
 build_a:
-  stage: buildd
-  script:
-    - echo "Build a"
-
-build_b:
   stage: build
   script:
-    - echo "Build b"
+    - echo "build"
 
-test_a:
+test:
   stage: test
   script:
-    - echo "test a"
+    - echo "test"
 
-test_b:
-  stage: test
-  script:
-    - echo "test b"
-
-deploy_a:
+deploy:
   stage: deploy
   script:
-    - echo "deploy a"
-
-deploy_b:
-  stage: deploy
-  script:
-    - echo "deploy b"
+    - echo "deploy"
