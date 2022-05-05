@@ -3,7 +3,9 @@ image: maven:3-jdk-13
 stages:
   - build
   - test
+  - clean
   - package
+  - install
 
 build:
   stage: build
@@ -15,7 +17,18 @@ test:
   script:
     - mvn test
 
+clean:
+  stage: clean
+  script:
+    - mvn clean
+
 package:
   stage: package
   script:
     - mvn package
+
+install:
+  stage: install
+  script:
+    - mvn install
+
