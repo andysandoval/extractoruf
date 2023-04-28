@@ -1,14 +1,8 @@
 image: maven:3-jdk-17
 
 stages:
-  - clean
   - build
   - test
-
-clean:
-  stage: clean
-  script:
-    - mvn clean
 
 build:
   stage: build
