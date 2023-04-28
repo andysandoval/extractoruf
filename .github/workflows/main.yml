@@ -18,7 +18,6 @@ jobs:
       - name: Build con maven
         run: mvn -B package
 
-jobs2:
   test:
     runs-on: ubuntu-latest
 
