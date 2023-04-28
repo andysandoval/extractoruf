@@ -1,7 +1,8 @@
 name: JAVA CI
 
 on:
-  branches: [pipeline]
+  push:
+    branches: [pipeline]
 
 jobs:
   build:
