@@ -14,4 +14,4 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build con maven
-        -uses: mvn -B package
+        run: mvn -B package
