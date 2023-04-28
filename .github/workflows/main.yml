@@ -1,6 +1,7 @@
 name: JAVA CI
 
-on: [push]
+on:
+  branches: [pipeline]
 
 jobs:
   build:
@@ -15,3 +16,16 @@ jobs:
           distribution: 'temurin'
       - name: Build con maven
         run: mvn -B package
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build con maven
+        run: mvn test
